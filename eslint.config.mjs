@@ -1,3 +1,4 @@
+// 参考: https://qiita.com/yamatai12/items/ebde3b4e92c870227712
 // @ts-check
 
 import eslint from "@eslint/js";
@@ -9,10 +10,7 @@ import unusedImportsPlugin from "eslint-plugin-unused-imports"
 import reactPlugin from "eslint-plugin-react"
 
 export default tseslint.config({
-  files: [
-    "**/*.ts",
-    "**/*.tsx",
-  ],
+  files: ["**/*.{ts,tsx}"],
   ignores : [
     ".next/**/*",
     "node_modules/**/*",

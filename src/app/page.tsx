@@ -1,8 +1,11 @@
+import React from "react";
+
 import Link from "next/link";
 
-import { LatestPost } from "~/app/_components/post";
-import { getServerAuthSession } from "~/server/auth";
-import { api, HydrateClient } from "~/trpc/server";
+import {LatestPost} from "~/app/_components/post";
+import {getServerAuthSession} from "~/server/auth";
+import {api, HydrateClient} from "~/trpc/server";
+
 import styles from "./index.module.css";
 
 export default async function Home() {
