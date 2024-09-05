@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 import { api } from "~/trpc/react";
+
 import styles from "../index.module.css";
 
 export function LatestPost() {
@@ -38,7 +39,7 @@ export function LatestPost() {
           type="text"
           placeholder="Title"
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => { setName(e.target.value); }}
           className={styles.input}
         />
         <button
