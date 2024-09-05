@@ -29,7 +29,6 @@ export default tseslint.config({
       ...globals.browser
     },
     parserOptions: {
-      project: "./tsconfig.json",
       projectService: true,
       tsconfigRootDir: import.meta.dirname,
       ecmaFeatures: {
@@ -49,9 +48,10 @@ export default tseslint.config({
     }
   },
   rules: {
-    // TODO: https://github.com/import-js/eslint-plugin-import/issues/2948 解決したら消す(2行)
+    // TODO: https://github.com/import-js/eslint-plugin-import/issues/2948 解決したら消す(3行)
     "import/no-named-as-default": "off",
     "import/no-named-as-default-member": "off",
+    "import/namespace": "off",
     "import/order": [
       "warn",
       {

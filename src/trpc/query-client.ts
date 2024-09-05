@@ -1,7 +1,5 @@
-import {
-  defaultShouldDehydrateQuery,
-  QueryClient,
-} from "@tanstack/react-query";
+import {defaultShouldDehydrateQuery, QueryClient,} from "@tanstack/react-query";
+// eslint-disable-next-line import/default
 import SuperJSON from "superjson";
 
 export const createQueryClient = () =>

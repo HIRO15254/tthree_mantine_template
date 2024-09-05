@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 
 import {LatestPost} from "~/app/_components/post";
+import {InstallPrompt} from "~/common/pwa/InstallPrompt";
+import {PushNotificationManager} from "~/common/pwa/PushNotificationManager";
 import {getServerAuthSession} from "~/server/auth";
 import {api, HydrateClient} from "~/trpc/server";
 
@@ -64,6 +66,8 @@ export default async function Home() {
           </div>
 
           {session?.user && <LatestPost />}
+          <PushNotificationManager />
+          <InstallPrompt />
         </div>
       </main>
     </HydrateClient>

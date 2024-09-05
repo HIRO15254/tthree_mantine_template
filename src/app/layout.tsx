@@ -8,6 +8,7 @@ import "@mantine/nprogress/styles.css";
 import React from "react";
 
 import {ColorSchemeScript, createTheme, MantineProvider} from "@mantine/core";
+// eslint-disable-next-line import/no-unresolved
 import {GeistSans} from "geist/font/sans";
 
 import {TRPCReactProvider} from "~/trpc/react";
