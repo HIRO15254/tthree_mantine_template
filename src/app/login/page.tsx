@@ -1,9 +1,10 @@
 import React from "react";
 
-import {Button, Paper} from "@mantine/core";
+import {Container, Text, Title} from "@mantine/core";
 import {redirect} from "next/navigation";
 
-import {auth, signIn} from "~/server/auth";
+import {LoginForm} from "~/features/auth/components/LoginForm";
+import {auth} from "~/server/auth";
 
 interface LoginPageProps {
   searchParams: {
@@ -19,16 +20,15 @@ const LoginPage: React.FC<LoginPageProps> = async (props) => {
     }
   })
   return (
-    <Paper>
-      <form
-        action={async () => {
-          "use server"
-          await signIn("discord", {redirectTo: searchParams.callbackUrl});
-        }}
-      >
-        <Button type={"submit"}>Login with Discord</Button>
-      </form>
-    </Paper>
+    <Container maw={500} my={40}>
+      <Title ta="center">
+        ログイン
+      </Title>
+      <Text c="dimmed" size="sm" ta="center" mt={5}>
+        当アプリケーションの利用にはログインが必要です。
+      </Text>
+      <LoginForm />
+    </Container>
   );
 }
 

@@ -2,9 +2,9 @@
 
 import {useEffect, useState} from "react";
 
-import {sendMeNotification, subscribePush, unsubscribePush} from "~/app/actions";
-import {flattenPushSubscription, urlBase64ToUint8Array} from "~/common/pwa/utils";
 import {env} from "~/env";
+import {sendMeNotification, subscribePush, unsubscribePush} from "~/features/pwa/actions";
+import {flattenPushSubscription, urlBase64ToUint8Array} from "~/features/pwa/utils";
 
 interface usePushNotificationReturnType {
   isSupported: boolean;

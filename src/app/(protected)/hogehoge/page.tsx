@@ -1,13 +1,9 @@
 import React from "react";
 
-import {LogoutButton} from "~/features/auth/components/LogoutButton";
-import {protectPage} from "~/features/auth/protectPage";
 import {InstallPrompt} from "~/features/pwa/InstallPrompt";
 import {PushNotificationManager} from "~/features/pwa/PushNotificationManager";
 
-export default async function Home() {
-  await protectPage();
-
+export default function Home() {
   return (
     <main>
       <div>
@@ -24,7 +20,6 @@ export default async function Home() {
 
         <PushNotificationManager />
         <InstallPrompt />
-        <LogoutButton />
       </div>
     </main>
   );

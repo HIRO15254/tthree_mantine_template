@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 
 import {Button, Input, Paper, Stack, Switch, Text, Title} from "@mantine/core";
 
-import {usePushNotification} from "~/common/pwa/hooks/usePushNotification";
+import {usePushNotification} from "~/features/pwa/usePushNotification";
 
 
 export function PushNotificationManager() {

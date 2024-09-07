@@ -1,4 +1,3 @@
-import "~/styles/globals.css";
 import "@mantine/core/styles.css";
 import "@mantine/charts/styles.css";
 import "@mantine/notifications/styles.css";
@@ -8,8 +7,6 @@ import "@mantine/nprogress/styles.css";
 import React from "react";
 
 import {ColorSchemeScript, createTheme, MantineProvider} from "@mantine/core";
-// eslint-disable-next-line import/no-unresolved
-import {GeistSans} from "geist/font/sans";
 
 import {TRPCReactProvider} from "~/trpc/react";
 
@@ -32,7 +29,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={GeistSans.className}>
+      <body>
         <TRPCReactProvider>
           <MantineProvider theme={theme}>
             {children}
