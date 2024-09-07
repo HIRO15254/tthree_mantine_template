@@ -6,7 +6,7 @@ import {InstallPrompt} from "~/common/pwa/InstallPrompt";
 import {PushNotificationManager} from "~/common/pwa/PushNotificationManager";
 import {protectPage} from "~/features/auth/protectPage";
 
-import styles from "./index.module.css";
+import styles from "./../index.module.css";
 
 export default async function Home() {
   await protectPage();
