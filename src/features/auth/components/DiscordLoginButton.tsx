@@ -19,7 +19,7 @@ export const DiscordLoginButton: React.FC<Props> = props => {
         await signIn("discord", {redirectTo: callbackUrl});
       }}
     >
-      <Button type="submit" leftSection={<DiscordIconFilled size={20} fill="#fff"/>} color={"#5865F2"} {...rest}>
+      <Button type="submit" leftSection={<DiscordIconFilled size={20} fill="#fff"/>} color="#5865F2" {...rest}>
         Discordでログイン
       </Button>
     </form>
