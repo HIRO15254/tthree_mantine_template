@@ -1,23 +1,17 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 
-import {Stack, Switch, Text} from "@mantine/core";
+import { Stack, Switch, Text } from "@mantine/core";
 
-import {usePushNotification} from "~/features/pwa/usePushNotification";
+import { usePushNotification } from "~/features/pwa/usePushNotification";
 
 export function PushNotificationSettings() {
-  const {
-    isSupported,
-    isSubscribed,
-    subscribeToPush,
-    unsubscribeFromPush,
-  } = usePushNotification()
+  const { isSupported, isSubscribed, subscribeToPush, unsubscribeFromPush } =
+    usePushNotification();
 
   if (!isSupported) {
-    return (
-      <Text c="dimmed">このブラウザではプッシュ通知を利用できません</Text>
-    )
+    return <Text c="dimmed">このブラウザではプッシュ通知を利用できません</Text>;
   }
 
   return (
@@ -28,5 +22,5 @@ export function PushNotificationSettings() {
         onChange={isSubscribed ? unsubscribeFromPush : subscribeToPush}
       />
     </Stack>
-  )
+  );
 }

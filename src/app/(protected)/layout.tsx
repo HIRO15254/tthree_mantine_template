@@ -1,11 +1,12 @@
-import React from "react";
+import type React from "react";
 
-import {protectPage} from "~/features/auth/protectPage";
+import { protectPage } from "~/features/auth/protectPage";
 
-
-const ProtectedLayout = async ({children}: Readonly<{ children: React.ReactNode }>) => {
-  await protectPage()
+const ProtectedLayout = async ({
+  children,
+}: Readonly<{ children: React.ReactNode }>) => {
+  await protectPage();
   return children;
-}
+};
 
-export default ProtectedLayout
+export default ProtectedLayout;

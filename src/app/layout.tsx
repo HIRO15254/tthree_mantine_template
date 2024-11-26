@@ -4,14 +4,13 @@ import "@mantine/notifications/styles.css";
 import "@mantine/dates/styles.css";
 import "@mantine/nprogress/styles.css";
 
-import React from "react";
+import type React from "react";
 
-import {ColorSchemeScript, createTheme, MantineProvider} from "@mantine/core";
+import { ColorSchemeScript, MantineProvider, createTheme } from "@mantine/core";
 
-import {TRPCReactProvider} from "~/trpc/react";
+import { TRPCReactProvider } from "~/trpc/react";
 
-import type {Metadata} from "next";
-
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -31,9 +30,7 @@ export default function RootLayout({
       </head>
       <body>
         <TRPCReactProvider>
-          <MantineProvider theme={theme}>
-            {children}
-          </MantineProvider>
+          <MantineProvider theme={theme}>{children}</MantineProvider>
         </TRPCReactProvider>
       </body>
     </html>

@@ -1,7 +1,7 @@
-import {headers} from "next/headers";
-import {redirect} from "next/navigation";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-import {auth} from "~/server/auth";
+import { auth } from "~/server/auth";
 
 /**
  * [Server-side]
@@ -14,5 +14,5 @@ export const protectPage = async () => {
     if (!session?.user) {
       redirect(`/login?callbackUrl=${headers().get("x-url") ?? "/"}`);
     }
-  })
-}
+  });
+};

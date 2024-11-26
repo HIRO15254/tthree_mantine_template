@@ -1,13 +1,13 @@
-import React from "react";
+import type React from "react";
 
-import {Button, ButtonProps} from "@mantine/core";
+import { Button, type ButtonProps } from "@mantine/core";
 
-import {signOut} from "~/server/auth";
+import { signOut } from "~/server/auth";
 
-type Props = Omit<ButtonProps, "onClick">
+type Props = Omit<ButtonProps, "onClick">;
 
-export const LogoutButton: React.FC<Props> = props => {
-  const {...rest} = props;
+export const LogoutButton: React.FC<Props> = (props) => {
+  const { ...rest } = props;
   return (
     <form
       action={async () => {
@@ -19,5 +19,5 @@ export const LogoutButton: React.FC<Props> = props => {
         Logout
       </Button>
     </form>
-  )
-}
+  );
+};

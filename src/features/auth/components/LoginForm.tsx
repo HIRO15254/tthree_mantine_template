@@ -1,9 +1,9 @@
-import React from "react";
+import type React from "react";
 
-import {Paper, Stack} from "@mantine/core";
+import { Paper, Stack } from "@mantine/core";
 
-import {DiscordLoginButton} from "~/features/auth/components/DiscordLoginButton";
-import {GoogleLoginButton} from "~/features/auth/components/GoogleLoginButton";
+import { DiscordLoginButton } from "~/features/auth/components/DiscordLoginButton";
+import { GoogleLoginButton } from "~/features/auth/components/GoogleLoginButton";
 
 export const LoginForm: React.FC = () => {
   return (
@@ -13,5 +13,5 @@ export const LoginForm: React.FC = () => {
         <DiscordLoginButton w="100%" />
       </Stack>
     </Paper>
-  )
-}
+  );
+};
