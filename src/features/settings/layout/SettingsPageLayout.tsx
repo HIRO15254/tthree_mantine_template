@@ -24,7 +24,6 @@ export const SettingsPageLayout: React.FC<Props> = (props) => {
       <Tabs value={segment} onChange={handleTabChange} pt="sm">
         <Tabs.List>
           <Tabs.Tab value="general">一般</Tabs.Tab>
-          <Tabs.Tab value="notification">通知</Tabs.Tab>
           <Tabs.Tab value="apperance">外観</Tabs.Tab>
         </Tabs.List>
       </Tabs>
